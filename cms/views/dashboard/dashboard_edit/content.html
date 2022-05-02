@@ -1,0 +1,26 @@
+{{ define "content" }}
+<h1>
+    Güncelle
+    <a href="/admin/dashboard" class="btn btn-outline-dark float-right"><i class="fa fa-arrow-left"></i> Geri Dön</a>
+</h1>
+<hr>
+<form action="/admin/update-word/{{ .Word.Slug }}" method="post" enctype="multipart/form-data" autocomplete="off" target="">
+    <div class="form-group">
+        <label>Terim</label>
+        <input type="text" name="word-name-en" class="form-control" value="{{ .Word.English }}" required novalidate>
+    </div>
+    <div class="form-group">
+        <label>Türkçe Karşılığı</label>
+        <input type="text" name="word-name-tr" class="form-control" value="{{ .Word.Turkish }}" required>
+    </div>
+    <div class="form-group">
+        <label>Kısaltma</label>
+        <input type="text" name="word-abb" class="form-control" value="{{ .Word.Abbreviation }}" required>
+    </div>
+    <div class="form-group">
+        <label>Açıklama</label>
+        <textarea name="word-desc" id="summernote" cols="30" rows="2" class="form-control" required>{{ .Word.Description }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-dark w-100 my-3">Güncelle </button>
+</form>
+{{ end }}

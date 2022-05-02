@@ -1,0 +1,27 @@
+{{ define "index" }}
+<!DOCTYPE html>
+<html lang="tr">
+{{ template "head" }}
+<body id="page-top">
+    <div id="wrapper">
+        {{ template "sidebar"}}
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                {{ template "topbar" . }}
+                <div class="container-fluid">
+                {{ template "content" .}}
+                </div>
+            </div>
+            {{ template "footer" }}
+        </div>
+    </div>
+    {{ template "scroll-top" }}
+    {{ template "logout-modal" }}
+    {{ template "scripts" }}
+    {{ template "alert" .Alert }}
+<script>
+        document.getElementById("new-add-element").style.display = 'none'; 
+</script>
+</body>
+</html>
+{{ end }}

@@ -1,0 +1,48 @@
+{{ define "sidebar" }}
+<ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: black;">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin/dashboard">
+        <div class="sidebar-brand-icon">
+            <img src="/cms/assets/img/saye logo.png" width="75px" alt="">
+        </div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>İstatistikler</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/admin/dashboard">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Terimler</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        İşlemler
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link" href="/admin/new-word">
+            <i class="fas fa-fw fa-plus"></i>
+            <span>Terim Ekle</span>
+        </a>
+    </li>
+
+    <hr class="sidebar-divider">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+</ul>
+{{ end }}
