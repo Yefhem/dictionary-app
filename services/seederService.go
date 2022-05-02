@@ -36,7 +36,7 @@ func (s *seederService) UploadUser() {
 		Username: username,
 		Email:    email,
 		Password: password,
-		Picture:  "uploads/.png",
+		Picture:  "uploads/cat.jpg",
 	}
 
 	if err := s.userRepository.Insert(user); err != nil {

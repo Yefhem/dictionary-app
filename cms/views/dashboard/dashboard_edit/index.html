@@ -7,7 +7,7 @@
         {{ template "sidebar"}}
         <div id="content-wrapper" class="d-flex flex-column">
             <div id="content">
-                {{ template "topbar"}}
+                {{ template "topbar" .}}
                 <div class="container-fluid">
                     {{ template "content" .}}
                 </div>

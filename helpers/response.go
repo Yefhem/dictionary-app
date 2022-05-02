@@ -11,17 +11,17 @@ type Response struct {
 }
 
 type PageModel struct {
-	Page     int64   `json:"page"`
-	LastPage float64 `json:"last_page"`
-	Total    int64   `json:"total"`
+	PageNumber int64   `json:"page_number"`
+	LastPage   float64 `json:"last_page"`
+	Total      int64   `json:"total"`
 }
 
 // BuildSuccessResponse -------->
 func BuildSuccessResponse(status bool, code int, message string, total int64, page int64, lastPage float64, data interface{}) Response {
 	pageModel := PageModel{
-		Page:     page,
-		LastPage: lastPage,
-		Total:    total,
+		PageNumber: page,
+		LastPage:   lastPage,
+		Total:      total,
 	}
 	res := Response{
 		Status:    status,

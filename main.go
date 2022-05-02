@@ -49,7 +49,7 @@ var (
 	searchController apicontrollers.SearchController = apicontrollers.NewSearchController(paginateService)
 )
 
-func Init() {
+func init() {
 	seederService.UploadUser()
 }
 

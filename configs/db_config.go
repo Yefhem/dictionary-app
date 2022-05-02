@@ -10,7 +10,7 @@ import (
 )
 
 func ConnectDB(ctx context.Context, mconf MongoConfiguration) *mongo.Database {
-	const link = ""
+	const link = "mongodb+srv://%s:%s@cluster0.2inm5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 	newClient, err := mongo.NewClient(options.Client().ApplyURI(fmt.Sprintf(link, mconf.Username, mconf.Password)))
 	if err != nil {

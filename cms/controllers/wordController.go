@@ -92,11 +92,11 @@ func (cont *wordController) DashboardNewWord(c echo.Context) error {
 	}
 
 	session, _ := cont.sessionService.InitSession(c)
-	usernameSession := session.Values["username"]
 
 	data := make(map[string]interface{})
 	data["Alert"] = cont.alertService.GetAlert(c)
-	data["Session"] = usernameSession
+	data["SessionUsername"] = session.Values["username"]
+	data["SessionPicture"] = session.Values["picture"]
 
 	return view.ExecuteTemplate(c.Response().Writer, "index", data)
 }
@@ -121,9 +121,13 @@ func (cont *wordController) DashboardEditWord(c echo.Context) error {
 		return err
 	}
 
+	session, _ := cont.sessionService.InitSession(c)
+
 	data := make(map[string]interface{})
 	data["Word"] = result
 	data["Alert"] = cont.alertService.GetAlert(c)
+	data["SessionUsername"] = session.Values["username"]
+	data["SessionPicture"] = session.Values["picture"]
 
 	return view.ExecuteTemplate(c.Response().Writer, "index", data)
 }
