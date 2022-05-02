@@ -4,7 +4,9 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/Yefhem/mongo/dictionary/dto"
 	"github.com/Yefhem/mongo/dictionary/models"
+	apperrors "github.com/Yefhem/mongo/dictionary/models/app-errors"
 	"github.com/Yefhem/mongo/dictionary/repository"
 	"github.com/gosimple/slug"
 	"go.mongodb.org/mongo-driver/bson/primitive"

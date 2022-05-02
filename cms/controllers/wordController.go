@@ -8,6 +8,7 @@ import (
 
 	"github.com/Yefhem/mongo/dictionary/dto"
 	"github.com/Yefhem/mongo/dictionary/helpers"
+	apperrors "github.com/Yefhem/mongo/dictionary/models/app-errors"
 	"github.com/Yefhem/mongo/dictionary/services"
 	"github.com/labstack/echo/v4"
 	"go.mongodb.org/mongo-driver/mongo"
