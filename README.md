@@ -1,6 +1,6 @@
 # Dictionary App (Go-MongoDb-Echo)
 
-In this project , we developed book RestAPI and CMS
+In this project , we developed dictionary RestAPI and CMS
 
 ## Features
 
